@@ -11,7 +11,7 @@
   <main>
     <p class="back"><a href="./">MotoAtlas</a></p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 11 October 2026</p>
+    <p class="updated">Last updated: 20 October 2026</p>
 
     <h2>What stays on your phone</h2>
     <p>Your rides (routes, speeds, lean angles, times), saved routes, saved places, folders, and
@@ -21,10 +21,29 @@
     <h2>Map services (Mapbox)</h2>
     <p>To show maps, search places, plan routes and match your recorded route to roads, MotoAtlas
       sends map requests to Mapbox, including the coordinates involved (for example your route's GPS
-      points when a ride is matched to roads). See
+      points when a ride is matched to roads, or your last few GPS points to look up the speed limit
+      when you're not on a planned route). See
       <a href="https://www.mapbox.com/legal/privacy">Mapbox's privacy policy</a>.</p>
     <p>The Mapbox map may also send Mapbox anonymous usage data to help improve its maps. You can
       turn this off at any time: tap the &#9432; button on the map, then Mapbox Telemetry.</p>
+    <p>Place search also looks in OpenStreetMap through Photon (photon.komoot.io), so businesses
+      mapped there can be found by name. It sends what you typed and your current location, so the
+      nearest matches come first. See
+      <a href="https://photon.komoot.io">Photon</a>.</p>
+
+    <h2>Road closures and fire hotspots</h2>
+    <p>With Road Alerts on, MotoAtlas looks up road closures and fire hotspots for the area around
+      your planned route (or around you). It sends that area's corners, not who you are, to
+      MotoAtlas's online service (Supabase), which keeps a copy of Victoria's road closures, and to
+      Geoscience Australia's DEA Hotspots service. You can turn Road Alerts off in Settings.</p>
+    <p>Fire Danger Ratings, Total Fire Bans and emergency warnings come from public Victorian
+      Government feeds (CFA and VicEmergency). MotoAtlas downloads the whole feed and works out your
+      fire district on your phone, so your location isn't sent to them.</p>
+
+    <h2>Weather</h2>
+    <p>To show rain on the way, MotoAtlas sends your approximate location (rounded to about 1 km)
+      to Open-Meteo for the forecast, about every 30 minutes while the app is open. Nothing else
+      about you is sent.</p>
 
     <h2>Riders and group rides (optional)</h2>
     <p>Only if you sign in to use Riders:</p>
@@ -33,12 +52,16 @@
         address, phone number or password is collected; the profile is tied to the app on your
         phone.</li>
       <li><strong>Riders:</strong> the list of riders you've added or who've added you.</li>
-      <li><strong>Group rides:</strong> the ride's name, its planned stops, who's invited and who
-        has joined.</li>
+      <li><strong>Group rides:</strong> the ride's name, its planned stops and the roads its route
+        keeps to, who's invited and who has joined, and who is the ride's lead or sweep.</li>
       <li><strong>Live location:</strong> while you're in a group ride, your position, direction
         and speed are sent about every 2 seconds to the other riders who've joined that ride.
         <strong>Live positions are passed straight through and are not stored.</strong> They stop
         as soon as you leave the group ride.</li>
+      <li><strong>Crash and SOS alerts:</strong> if a crash alert goes out (Crash Alerts, when you
+        don't answer "Are you OK?" after a hard stop) or you send an SOS, your position at that
+        moment is stored with the alert so the riders in that group ride can find you. It's
+        deleted when you delete your rider profile.</li>
     </ul>
     <p>This information is held by Supabase, MotoAtlas's online service provider, and protected so
       that riders can only see riders they're connected with and rides they're part of.</p>
