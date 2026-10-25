@@ -11,34 +11,67 @@
   <main>
     <p class="back"><a href="./">MotoAtlas</a></p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 20 October 2026</p>
+    <p class="updated">Last updated: 25 October 2026</p>
+    <p>This policy covers the MotoAtlas app on iPhone and Android.</p>
+    <p><strong>What changed:</strong> MotoAtlas no longer uses Mapbox. Maps, search and route
+      planning now come from MotoAtlas's own map server (hosted by FlowVPS in Melbourne) and map
+      files delivered through Cloudflare. This policy now also covers Race Mode and the Android
+      app.</p>
 
     <h2>What stays on your phone</h2>
-    <p>Your rides (routes, speeds, lean angles, times), saved routes, saved places, folders, and
-      police/hazard reports are stored <strong>only on your phone</strong>. They aren't uploaded to
-      MotoAtlas.</p>
+    <p>Your rides (routes, speeds, lean angles, times), Race Mode sessions and lap times, your bikes
+      and their service history in My Bike, saved routes, saved places, folders, police/hazard
+      reports, your settings and any offline maps you download are stored <strong>only on your
+      phone</strong>. They aren't uploaded to MotoAtlas. Race Mode times laps on your phone from
+      your GPS; nothing is sent for that, and a race session isn't matched to roads.</p>
+    <p>My Bike only uses your camera or photo library when you choose to add a receipt photo, and
+      the photo stays on your phone. A service history PDF is only shared when you choose to share
+      it, with whoever you send it to. Service reminders are notifications made on your phone, after
+      a ride is saved. "Shop for Parts" and "Find a Mechanic" open the MCAS or Google Maps website
+      with a search for the part or your bike's make; those sites' own privacy policies apply
+      there.</p>
 
-    <h2>Map services (Mapbox)</h2>
-    <p>To show maps, search places, plan routes and match your recorded route to roads, MotoAtlas
-      sends map requests to Mapbox, including the coordinates involved (for example your route's GPS
-      points when a ride is matched to roads, or your last few GPS points to look up the speed limit
-      when you're not on a planned route). See
-      <a href="https://www.mapbox.com/legal/privacy">Mapbox's privacy policy</a>.</p>
-    <p>The Mapbox map may also send Mapbox anonymous usage data to help improve its maps. You can
-      turn this off at any time: tap the &#9432; button on the map, then Mapbox Telemetry.</p>
-    <p>Place search also looks in OpenStreetMap through Photon (photon.komoot.io), so businesses
-      mapped there can be found by name. It sends what you typed and your current location, so the
-      nearest matches come first. See
-      <a href="https://photon.komoot.io">Photon</a>.</p>
+    <h2>Maps, search and route planning</h2>
+    <p>MotoAtlas runs its own map server, hosted by FlowVPS in Melbourne, Australia. The app sends
+      it only what each job needs:</p>
+    <ul>
+      <li><strong>Route planning:</strong> your stops and your current position, and the way you're
+        heading when a route is re-planned on the road.</li>
+      <li><strong>Search:</strong> what you type and your current location, so the nearest matches
+        come first.</li>
+      <li><strong>Matching a ride to roads:</strong> when you finish a ride (not a race session), its
+        GPS points, once, so the saved route follows the roads. The result is kept on your phone.</li>
+      <li><strong>Road and town look-ups:</strong> a point on or near your route, for example to
+        name the nearest town or check for main roads.</li>
+    </ul>
+    <p>None of these requests includes your rider name or rider code. Like most web servers, the map
+      server keeps a short log of requests (internet address, time and the address requested, which
+      for some requests includes coordinates) to keep the service secure and fix problems; the log
+      is deleted automatically after about two weeks. MotoAtlas doesn't use it to track you and
+      doesn't share it.</p>
+    <p>Map pictures, speed limits, fuel stations and offline maps come from map files that MotoAtlas
+      stores with <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> (at
+      maps.motoatlas.com.au) and reads on your phone. Some of the base map comes from
+      <a href="https://openfreemap.org">OpenFreeMap</a> and the hill shading from Amazon Web
+      Services' public terrain tiles. Like any website, these services see your phone's internet
+      address and which parts of the map it loads, but nothing else about you.</p>
+    <p>MotoAtlas doesn't collect your speed for traffic. Traffic colours on a route come from
+      government road data on the map server.</p>
+
+    <h2>Shared route links</h2>
+    <p>When you share a route, the link (motoatlas.com.au) contains the route's name and its stops'
+      coordinates, so anyone you send it to can see them. If it's opened without the app, the page
+      is served through Cloudflare. MotoAtlas doesn't keep a copy of shared routes.</p>
 
     <h2>Road closures and fire hotspots</h2>
     <p>With Road Alerts on, MotoAtlas looks up road closures and fire hotspots for the area around
       your planned route (or around you). It sends that area's corners, not who you are, to
       MotoAtlas's online service (Supabase), which keeps a copy of Victoria's road closures, and to
       Geoscience Australia's DEA Hotspots service. You can turn Road Alerts off in Settings.</p>
-    <p>Fire Danger Ratings, Total Fire Bans and emergency warnings come from public Victorian
-      Government feeds (CFA and VicEmergency). MotoAtlas downloads the whole feed and works out your
-      fire district on your phone, so your location isn't sent to them.</p>
+    <p>Fire Danger Ratings, Total Fire Bans and major fire incidents come from public government
+      feeds: CFA in Victoria, and the NSW Rural Fire Service in NSW and the ACT. MotoAtlas downloads
+      the whole feed and works out your fire district on your phone, so your location isn't sent to
+      them.</p>
 
     <h2>Weather</h2>
     <p>To show rain on the way, MotoAtlas sends your approximate location (rounded to about 1 km)
@@ -58,6 +91,10 @@
         and speed are sent about every 2 seconds to the other riders who've joined that ride.
         <strong>Live positions are passed straight through and are not stored.</strong> They stop
         as soon as you leave the group ride.</li>
+      <li><strong>Race Mode in a group ride:</strong> while you're recording a session with Race
+        Mode on, your lap times, line crossing times and how far round the current lap you are are
+        sent to the other riders who've joined that ride, so everyone sees the race order and gaps.
+        Like live positions, <strong>they're passed straight through and are not stored.</strong></li>
       <li><strong>Crash and SOS alerts:</strong> if a crash alert goes out (Crash Alerts, when you
         don't answer "Are you OK?" after a hard stop) or you send an SOS, your position at that
         moment is stored with the alert so the riders in that group ride can find you. It's
@@ -66,14 +103,33 @@
     <p>This information is held by Supabase, MotoAtlas's online service provider, and protected so
       that riders can only see riders they're connected with and rides they're part of.</p>
 
+    <h2>Where your information goes</h2>
+    <ul>
+      <li>MotoAtlas's map server is in Australia (FlowVPS, Melbourne).</li>
+      <li>Supabase stores rider and group ride information in South Korea (Seoul).</li>
+      <li>Cloudflare, OpenFreeMap and Amazon Web Services deliver map files from servers around the
+        world, usually one near you.</li>
+    </ul>
+    <p>Everything the app sends over the internet is encrypted in transit (HTTPS). MotoAtlas
+      doesn't sell your information, doesn't show ads, doesn't track you across other apps or
+      websites, and doesn't share your information with anyone for advertising.</p>
+
+    <h2>Android and Google Play</h2>
+    <p>The Android app works the same way and collects the same things: your location for the
+      features above, and your rider name and rider code if you sign in to use Riders. As described
+      in its Google Play Data safety section, this information is encrypted in transit, isn't sold
+      or shared with third parties for advertising, and can be deleted at any time (see below).</p>
+
     <h2>Your choices</h2>
     <ul>
       <li>Riders and group rides are optional; the rest of the app works without signing in.</li>
       <li>Leave a group ride at any time to stop sharing your location.</li>
       <li>Remove riders at any time.</li>
+      <li>Turn off Road Alerts in Settings.</li>
       <li>Delete your rider profile and everything stored with it at any time: Rides &rarr; Riders
-        &rarr; Delete Rider Profile. For help, contact
+        &rarr; Delete Rider Profile. You can also ask for it to be deleted by emailing
         <a href="mailto:motoatlasco@gmail.com">motoatlasco@gmail.com</a>.</li>
+      <li>Deleting the app deletes everything stored only on your phone.</li>
     </ul>
 
     <h2>Children</h2>
